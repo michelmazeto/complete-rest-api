@@ -8,7 +8,7 @@ class ImportCategoryController {
 
     this.importCategoryUseCase.execute(file);
 
-    return response.status(201).send();
+    return response.send();
   }
 }
 
