@@ -1,17 +1,21 @@
 import 'reflect-metadata';
 
 import { DataSource } from 'typeorm';
+import { Category } from '../modules/cars/model/Category';
+import { Specification } from '../modules/cars/model/Specification';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
-  host: 'banco' || 'localhost',
+  host: 'localhost',
   port: 5432,
   username: 'postgres',
   password: 'postgres',
-  database: 'banco',
+  database: 'rentx',
   synchronize: true,
   logging: false,
-  entities: [],
+  entities: [Category, Specification],
+  migrations: ['src/database/migrations/*.ts'],
+  subscribers: [],
 });
 
 AppDataSource.initialize()
