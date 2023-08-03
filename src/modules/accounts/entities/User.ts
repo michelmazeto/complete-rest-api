@@ -10,7 +10,7 @@ class User {
   name: string;
 
   @Column()
-  user: string;
+  username: string;
 
   @Column()
   email: string;
@@ -19,7 +19,7 @@ class User {
   password: string;
 
   @Column()
-  driver_licence: string;
+  driver_license: string;
 
   @Column()
   isAdmin: boolean;
