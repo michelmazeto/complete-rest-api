@@ -21,7 +21,7 @@ class User {
   @Column({ default: false })
   isAdmin: boolean;
 
-  @Column()
+  @Column({ default: 'default_avatar.png' })
   avatar: string;
 
   @CreateDateColumn()
